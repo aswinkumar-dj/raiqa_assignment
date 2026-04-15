@@ -22,7 +22,7 @@ const SelectedMeals = (data) => {
           Clear All
         </button>
       </div>
-      <div className="h-fit max-h-[600px] overflow-y-auto">
+      <div className="h-fit max-h-[400px] overflow-y-auto">
         {selectedMeal.map((meal) => (
           <div key={meal.id} className="flex justify-between items-center py-2">
             <span className="flex-1">{meal.name}</span>

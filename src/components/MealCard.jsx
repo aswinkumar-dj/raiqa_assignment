@@ -2,7 +2,7 @@ const MealCard = (data) => {
     const { meal, addMeals, isExpensive, isAffordable } = data;
 
   return (
-    <div className="border max-w-130 p-4 rounded-lg shadow-md flex flex-col items-start">
+    <div className="border w-full min-w-fit p-4 rounded-lg shadow-md flex flex-col items-start">
       <div className="flex justify-between w-full">
         <h1>{meal.name}</h1>
         <span
