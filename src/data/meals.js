@@ -1,6 +1,6 @@
 export const meals = [{
     id: 1,
-    name: "ChennaiChicken Biriyani",
+    name: "Chennai Chicken Biriyani",
     price:150,
     isAvailable: true
 },{
@@ -15,17 +15,17 @@ export const meals = [{
     isAvailable:true
 },{
     id:4,
-    name: "Andhra Special Non veg Meals",
+    name: "Andhra Special Meals",
     price:300,
     isAvailable:true
 },{
     id:5,
-    name:"Tamil Nadu Special Non veg Meals",
+    name:"Tamil Nadu Special Meals",
     price:280,
     isAvailable:true
 },{
     id:6,
-    name:"Kerala Special Non veg Meals",
+    name:"Kerala Special Meals",
     price:280,
     isAvailable:false
 },{

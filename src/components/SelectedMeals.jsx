@@ -1,21 +1,47 @@
 const SelectedMeals = (data) => {
-    const {selectedMeal, handleClear, handleRemove} = data; 
-    const total = selectedMeal.reduce((sum, meal) => sum + meal.price, 0)
-    if (selectedMeal.length === 0) {
-        return <div>
-            <h3>No Meals Selected</h3>
-        </div>
-    }  
-    return <div>
-        <h1>Selected Meals</h1>
-        <button onClick={handleClear}>Clear All</button>
-        {selectedMeal.map(meal => <div key={meal.id}>{meal.name}<span> - {meal.price}</span>
-        <button onClick={() => handleRemove(meal)}>Remove</button>
-        
-        </div>)}
-        <h4>Total: {total}</h4>
-        
-        
+
+  const { selectedMeal, handleClear, handleRemove } = data;
+  const total = selectedMeal.reduce((sum, meal) => sum + meal.price, 0);
+
+  if (selectedMeal.length === 0) {
+    return (
+      <div className="w-100 border p-4 rounded-lg shadow-md">
+        <h1 className="font-bold flex justify-between">No Meals Selected</h1>
+      </div>
+    );
+  }
+  
+  return (
+    <div className="w-100 border p-4 rounded-lg shadow-md">
+      <div className="font-bold flex justify-between border-b pb-2 mb-4 ">
+        <h1>Selected Meals({selectedMeal.length})</h1>
+        <button
+          onClick={handleClear}
+          className="bg-red-500 text-white px-2 py-1 rounded-md text-xs"
+        >
+          Clear All
+        </button>
+      </div>
+      <div className="h-fit max-h-[600px] overflow-y-auto">
+        {selectedMeal.map((meal) => (
+          <div key={meal.id} className="flex justify-between items-center py-2">
+            <span className="flex-1">{meal.name}</span>
+            <span className="text-green-600 font-semibold w-16 text-right">
+              ₹{meal.price}
+            </span>
+            <button
+              onClick={() => handleRemove(meal)}
+              className="text-gray-500 hover:text-gray-700 border px-1 rounded-sm text-xs ml-2"
+            >
+              x
+            </button>
+          </div>
+        ))}
+      </div>
+      <h1 className="font-bold text-lg border-t pt-2 mt-4 text-right">
+        Total: ₹{total}
+      </h1>
     </div>
-}
+  );
+};
 export default SelectedMeals;
