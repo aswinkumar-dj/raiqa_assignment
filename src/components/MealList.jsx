@@ -7,7 +7,7 @@ const MealList = (data) => {
 
   return (
    
-      <div className="border w-full h-[600px] overflow-y-auto p-4 md:grid grid-cols-2 gap-4 rounded-lg shadow-md">
+      <div className="border w-full min-w-60 h-[600px] overflow-y-auto p-4 md:grid grid-cols-2 gap-4 space-y-2 md:space-y-0 rounded-lg shadow-md">
         {meals.map((meal) => (
           <MealCard
             key={meal.id}

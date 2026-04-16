@@ -26,6 +26,10 @@ function App() {
     setSortOrder(e.target.value);
   };
 
+  const handleClear = () => {
+    setSelectedMeal([]);
+  };
+
   const handleAdd = (meal) => {
     const alreadyAdded = selectedMeal.some((m) => m.id === meal.id);
     if (!alreadyAdded) {
@@ -33,16 +37,12 @@ function App() {
     }
   };
 
-  const handleClear = () => {
-    setSelectedMeal([]);
-  };
-  
   const handleRemove = (meal) => {
     setSelectedMeal(selectedMeal.filter((m) => m.id !== meal.id));
   };
 
   return (
-    <div className="md:flex justify-center gap-10 p-10">
+    <div className="space-y-10 md:flex justify-center gap-10 p-10">
       <div>
         <FilterSortBar
           showAll={showAll}

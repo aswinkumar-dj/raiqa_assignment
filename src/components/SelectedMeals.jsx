@@ -5,14 +5,14 @@ const SelectedMeals = (data) => {
 
   if (selectedMeal.length === 0) {
     return (
-      <div className="w-100 border p-4 rounded-lg shadow-md">
+      <div className="min-w-60 md:w-100 h-fit border p-4 rounded-lg shadow-md">
         <h1 className="font-bold flex justify-between">No Meals Selected</h1>
       </div>
     );
   }
   
   return (
-    <div className="w-100 border p-4 rounded-lg shadow-md">
+    <div className="min-w-60 md:w-100 h-fit max-h-[600px] overflow-y-auto border p-4 rounded-lg shadow-md">
       <div className="font-bold flex justify-between border-b pb-2 mb-4 ">
         <h1>Selected Meals({selectedMeal.length})</h1>
         <button
@@ -22,7 +22,7 @@ const SelectedMeals = (data) => {
           Clear All
         </button>
       </div>
-      <div className="h-fit max-h-[400px] overflow-y-auto">
+      <div className=" ">
         {selectedMeal.map((meal) => (
           <div key={meal.id} className="flex justify-between items-center py-2">
             <span className="flex-1">{meal.name}</span>

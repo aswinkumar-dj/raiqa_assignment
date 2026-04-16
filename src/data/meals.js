@@ -48,4 +48,14 @@ export const meals = [{
     name:"Gulab Jamun",
     price:80,
     isAvailable:true
+},{
+    id:11,
+    name:"Rasmalai",
+    price:90,
+    isAvailable:true
+},{
+    id:12,
+    name:"Kaju Katli",
+    price:150,
+    isAvailable:false
 }]
