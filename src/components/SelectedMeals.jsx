@@ -1,5 +1,4 @@
 const SelectedMeals = (data) => {
-
   const { selectedMeal, handleClear, handleRemove } = data;
   const total = selectedMeal.reduce((sum, meal) => sum + meal.price, 0);
 

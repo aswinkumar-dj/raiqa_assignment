@@ -4,7 +4,7 @@ import SelectedMeals from "./components/SelectedMeals";
 import { meals } from "./data/meals";
 import { useState } from "react";
 
-function App() {
+const App = () => {
   const [showAll, setShowAll] = useState(false);
   const [selectedMeal, setSelectedMeal] = useState([]);
   const [sortOrder, setSortOrder] = useState("default");
@@ -12,6 +12,7 @@ function App() {
   const displayMeals = showAll
     ? meals
     : meals.filter((meal) => meal.isAvailable);
+
   const sortedMeals = [...displayMeals].sort((a, b) => {
     if (sortOrder === "asc") return a.price - b.price;
     if (sortOrder === "desc") return b.price - a.price;
